@@ -89,7 +89,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #2F7FE9;
   line-height: 48px;
   display: inline;
 }
@@ -121,7 +121,7 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
+  
 }
 
 
@@ -163,6 +163,23 @@ a {
   color: #f3f3f3;
   line-height: 28px;
 }
+.project-title {
+  text-align: center;
+  
+  font-size: 20px;
+  color: #3F3F3F;
+  line-height: 38px;
+}
+
+.project-desc {
+  margin-left:30%;
+  margin-right: auto;
+  text-align: left;
+
+}
+.project-padding div{
+  margin-top: 15px;
+}
 
 #skills-h3 {
   color: #f5ae23;
@@ -173,13 +190,22 @@ a {
   display: inline-block;
 }
 
-.orange {
-  background-color: #f5ae23;
+
+.theme-bg {
+  background-color:#2F7FE9;
+}
+.theme-text {
+  color: #2F7FE9;
 }
 
+.orange-bg {
+  background-color: #f5ae23;
+}
 .orange-text {
   color: #f5ae23;
 }
+
+
 
 .white-text {
   font-weight: bold;

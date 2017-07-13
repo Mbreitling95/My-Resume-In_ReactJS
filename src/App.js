@@ -139,7 +139,7 @@ function TopContacts(props) {
   return (
     <ul id="topContacts" className="flex-box">
       {props.contacts.map(contact => <li className="flex-item">
-        <span className="orange-text">{contact[0]} :</span>
+        <span className="theme-text">{contact[0]} :</span>
         <span className="white-text">{contact[1]}</span></li>)}
     </ul>
   );
@@ -150,7 +150,7 @@ function Skills(props) {
     <div>
       <span className="welcome-message">{props.welcomeMessage}</span>
       <img src={props.bioPic} alt="My Face" className="biopic" />
-      <h3 id="skills-h3">Skills at a Glance:</h3>
+      <h3  className="theme-text">Skills at a Glance:</h3>
       <ul id="skills" className="flex-column">
         {props.skills.map(skill => <li className="flex-item">
           <span className="white-text">{skill}</span><hr/></li>)}
@@ -165,7 +165,7 @@ function WorkEntry(props) {
   return (
     <div className="work-entry">
       <div>{props.job.title} at 
-      <span className="orange-text" >
+      <span className="theme-text" >
       {props.job.employer}</span> 
       as a {props.job.position}
       </div>
@@ -181,14 +181,21 @@ function WorkEntry(props) {
 /* Child Component of <ProjectSection> [3]*/
 function ProjectEntry(props) {
   return (
-    <div className="work-entry">
-      <div className="welcome-message orange-text" >{props.project.title}:</div>
-      <div>Employer: <span className="orange-text" >{props.project.employer}</span> 
-      <div>Role: <span className="orange-text" >{props.project.position}</span></div>
+    <div className="project-entry">
+      <div  className="theme-text project-title " >{props.project.title}:</div>
+      <div className="project-padding" >
+        Employer: <span className="theme-text" >{props.project.employer}</span>
+        <span className="location-text">
+          <div>{props.project.location}</div>
+          <div>{props.project.dates}</div>
+        </span> 
+        
+        <div>Role: <span className="theme-text" >{props.project.position}</span></div>
+        <div> Project: {props.project.description}</div>
       </div>
-      <div>{props.project.description}<span className="location-text">{props.project.dates}</span></div>
       <br/>
-      <img src={props.project.image} alt="Screenshot of Project" className="project-img" style={{display: "none"}}/>
+      <img src={props.project.image} alt="Screenshot of Project" className="project-img" />
+      <hr/>
     </div>
   );
 }
@@ -255,12 +262,12 @@ function CourseSection(props) {
 
 function FooterSection(props) {
   return (
-      <div id="lets-connect" className="orange center-text">
+      <div id="lets-connect" className="theme center-text">
         <h2 className="dark-gray">Let's Connect</h2>
         <ul id="footerContacts" className="flex-box">
           {props.contacts.map(contact => <li className="flex-item">
             <span className="black-text">{contact[0]}:</span>
-            <span className="white-text">{contact[1]}</span></li>)}
+            <span className="theme-text">{contact[1]}</span></li>)}
         </ul>
       </div>
   );
