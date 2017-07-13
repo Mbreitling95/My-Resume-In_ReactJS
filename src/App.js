@@ -40,13 +40,23 @@ const JobsModel = [{
     description: "Design and Development of the Front-End HTML and CSS for a Vendor Login Page"
 }];
 
-var projects = [{ 
+var projects = [
+  /*{ 
     title: "Responsive Login/Signup SPA",
     dates: "Spring 2017",
     description: "Redesign and Development of new Responsive SPA for Clients Vendor Login/Signup site.",
     images: ["./images/Responsive-SPA.png", "./images/Responsive-SPA-Cropped2.png"]  
+  },*/
+  {
+      employer: "Breitling Consulting",
+      title: "Responsive Login/Signup SPA",
+      position: "Lead Front End Developer",
+      location: "Remote from Winnsboro, Texas",
+      dates: "During March 2017",
+      description: "Redesign and Development of new Responsive SPA for Client's Vendor Login/Signup site.",
+      image: "./images/Responsive-SPA-Cropped2.png"
   } 
-  ];
+];
 
 
 
@@ -172,10 +182,13 @@ function WorkEntry(props) {
 function ProjectEntry(props) {
   return (
     <div className="work-entry">
-      <span className="welcome-message orange-text" >{props.project.title}:</span>
+      <div className="welcome-message orange-text" >{props.project.title}:</div>
+      <div>Employer: <span className="orange-text" >{props.project.employer}</span> 
+      <div>Role: <span className="orange-text" >{props.project.position}</span></div>
+      </div>
       <div>{props.project.description}<span className="location-text">{props.project.dates}</span></div>
       <br/>
-      <img src={props.project.images[1]} alt="Screenshot of Project" className="project-img" style={{display: "none"}}/>
+      <img src={props.project.image} alt="Screenshot of Project" className="project-img" style={{display: "none"}}/>
     </div>
   );
 }
