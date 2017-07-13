@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 //https://stackoverflow.com/story/mbreitling95
@@ -139,7 +139,7 @@ function Skills(props) {
   return (
     <div>
       <span className="welcome-message">{props.welcomeMessage}</span>
-      <img src={props.bioPic} className="biopic" />
+      <img src={props.bioPic} alt="My Face" className="biopic" />
       <h3 id="skills-h3">Skills at a Glance:</h3>
       <ul id="skills" className="flex-column">
         {props.skills.map(skill => <li className="flex-item">
@@ -175,7 +175,7 @@ function ProjectEntry(props) {
       <span className="welcome-message orange-text" >{props.project.title}:</span>
       <div>{props.project.description}<span className="location-text">{props.project.dates}</span></div>
       <br/>
-      <img src={props.project.images[1]} className="project-img" style={{display: "none"}}/>
+      <img src={props.project.images[1]} alt="Screenshot of Project" className="project-img" style={{display: "none"}}/>
     </div>
   );
 }
